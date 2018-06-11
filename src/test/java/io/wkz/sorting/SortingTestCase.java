@@ -25,4 +25,11 @@ public class SortingTestCase {
 		heapSorting.sorting(array);
 		System.out.println(Arrays.toString(array));
 	}
+
+	@Test
+	public void bubbleSortingTest() {
+		BubbleSorting bubbleSorting = new BubbleSorting();
+		bubbleSorting.sorting(array);
+		System.out.println(Arrays.toString(array));
+	}
 }
