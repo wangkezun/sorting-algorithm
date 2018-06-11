@@ -1,5 +1,6 @@
 package io.wkz.sorting;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -23,20 +24,29 @@ public class SortingTestCase {
 	public void heapSortingTest() {
 		HeapSorting heapSorting = new HeapSorting();
 		heapSorting.sorting(array);
-		System.out.println(Arrays.toString(array));
 	}
 
 	@Test
 	public void bubbleSortingTest() {
 		BubbleSorting bubbleSorting = new BubbleSorting();
 		bubbleSorting.sorting(array);
-		System.out.println(Arrays.toString(array));
 	}
 
 	@Test
 	public void selectionSortingTest() {
 		SelectionSorting selectionSorting = new SelectionSorting();
 		selectionSorting.sorting(array);
+	}
+
+	@Test
+	public void insertionSortingTest(){
+		InsertionSorting insertionSorting = new InsertionSorting();
+		insertionSorting.sorting(array);
+
+	}
+
+	@After
+	public void after() {
 		System.out.println(Arrays.toString(array));
 	}
 }
