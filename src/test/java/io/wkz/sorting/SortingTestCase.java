@@ -42,8 +42,13 @@ public class SortingTestCase {
 	public void insertionSortingTest(){
 		InsertionSorting insertionSorting = new InsertionSorting();
 		insertionSorting.sorting(array);
-
 	}
+
+	@Test
+    public void shellSortingTest() {
+        ShellSorting shellSorting = new ShellSorting();
+        shellSorting.sorting(array);
+    }
 
 	@After
 	public void after() {
