@@ -14,8 +14,8 @@ public class SortingTestCase {
 	private int[] array;
 
 	@Before
-	public void before(){
-		array =  new int[]{3,5,3,0,8,6,1,5,8,6,2,4,9,4,7,0,1,8,9,7,3,1,2,5,9,7,4,0,2,6};
+	public void before() {
+		array = new int[]{3, 5, 3, 0, 8, 6, 1, 5, 8, 6, 2, 4, 9, 4, 7, 0, 1, 8, 9, 7, 3, 1, 2, 5, 9, 7, 4, 0, 2, 6};
 	}
 
 
@@ -30,6 +30,13 @@ public class SortingTestCase {
 	public void bubbleSortingTest() {
 		BubbleSorting bubbleSorting = new BubbleSorting();
 		bubbleSorting.sorting(array);
+		System.out.println(Arrays.toString(array));
+	}
+
+	@Test
+	public void selectionSortingTest() {
+		SelectionSorting selectionSorting = new SelectionSorting();
+		selectionSorting.sorting(array);
 		System.out.println(Arrays.toString(array));
 	}
 }
