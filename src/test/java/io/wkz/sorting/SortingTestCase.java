@@ -21,9 +21,9 @@ public class SortingTestCase {
 
 
 	@Test
-	public void heapSortingTest() {
-		HeapSorting heapSorting = new HeapSorting();
-		heapSorting.sorting(array);
+	public void recursiveHeapSortingTest() {
+		RecursiveHeapSorting recursiveHeapSorting = new RecursiveHeapSorting();
+		recursiveHeapSorting.sorting(array);
 	}
 
 	@Test
@@ -48,6 +48,12 @@ public class SortingTestCase {
     public void shellSortingTest() {
         ShellSorting shellSorting = new ShellSorting();
         shellSorting.sorting(array);
+    }
+
+    @Test
+    public void nonRecursiveHeapSortingTest() {
+        NonRecursiveHeapSorting nonRecursiveHeapSorting = new NonRecursiveHeapSorting();
+        nonRecursiveHeapSorting.sorting(array);
     }
 
 	@After
