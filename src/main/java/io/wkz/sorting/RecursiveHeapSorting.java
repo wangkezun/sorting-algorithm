@@ -14,14 +14,12 @@ public class RecursiveHeapSorting implements Sorting {
         //堆排序需要先对数组进行堆化处理
         //从第一个非叶子节点出发即可，叶子节点都可以看作已经符合堆要求的节点
 
-        int length = array.length - 1;
-        int beginIndex = (length - 1) >> 1;
-        for (int i = beginIndex; i >= 0; i--) {
-            recursiveMaxHeapify(array, i, length);
+        for (int i = array.length / 2; i >= 0; i--) {
+            recursiveMaxHeapify(array, i, array.length);
         }
 
         //堆化完成之后，从length开始，交换堆顶元素与length位置元素，并且重新堆化，最后到length为0
-        for (int i = length; i > 0; i--) {
+        for (int i = array.length - 1; i > 0; i--) {
             //交换堆顶元素
             swap(array, 0, i);
             //此时因为堆顶元素可能不符合堆要求，因此需要进行一次堆化
