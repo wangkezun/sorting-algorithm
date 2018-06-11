@@ -12,9 +12,9 @@ public class BubbleSorting implements Sorting {
 	@Override
 	public int[] sorting(int[] array) {
 		for (int i = 0; i < array.length; i++) {
-			for (int j = i; j < array.length; j++) {
-				if (array[i] > array[j]) {
-					swap(array, i, j);
+			for (int j = 0; j < array.length-1-i; j++) {
+				if (array[j] > array[j+1]) {
+					swap(array, j, j+1);
 				}
 			}
 		}
