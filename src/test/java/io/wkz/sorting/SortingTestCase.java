@@ -73,7 +73,13 @@ public class SortingTestCase {
         RecursiveQuickSorting recursiveQuickSorting = new RecursiveQuickSorting();
         recursiveQuickSorting.sort(array);
         assertTrue(Sorting.isSorted(array));
+    }
 
+    @Test
+    public void nonRecursiveQuickSortingTest() {
+        NonRecursiveQuickSorting nonRecursiveQuickSorting = new NonRecursiveQuickSorting();
+        nonRecursiveQuickSorting.sort(array);
+        assertTrue(Sorting.isSorted(array));
     }
 
     @After
