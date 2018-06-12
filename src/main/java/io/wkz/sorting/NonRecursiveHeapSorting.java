@@ -2,9 +2,16 @@ package io.wkz.sorting;
 
 import io.wkz.sorting.base.Sorting;
 
+/**
+ * 非递归方式的堆排序
+ * 采用一个for循环的方式进行堆化处理
+ * @author tyrael
+ * @since 1.0
+ * @see io.wkz.sorting.RecursiveHeapSorting
+ */
 public class NonRecursiveHeapSorting implements Sorting {
     @Override
-    public int[] sorting(int[] array) {
+    public void sort(int[] array) {
         for (int i = array.length / 2; i >= 0; i--) {
             nonRecursiveMaxHeapify(array, i, array.length);
         }
@@ -12,7 +19,6 @@ public class NonRecursiveHeapSorting implements Sorting {
             swap(array, 0, i);
             nonRecursiveMaxHeapify(array, 0, i);
         }
-        return array;
     }
 
 
