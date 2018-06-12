@@ -13,7 +13,7 @@ public class ShellSorting implements Sorting {
      * @return 排序后的数组
      */
     @Override
-    public int[] sorting(int[] array) {
+    public void sort(int[] array) {
         //希尔排序与插入排序的区别在于多了一层gap的选择。其他与插入排序一致
         int i;
         //首先选择步长gap 流行的选取步长的方式为h(1)=N/2以及h(k)=h(k+1)/2 但是不好 此处使用此方法
@@ -28,6 +28,5 @@ public class ShellSorting implements Sorting {
                 array[i] = temp;
             }
         }
-        return array;
     }
 }

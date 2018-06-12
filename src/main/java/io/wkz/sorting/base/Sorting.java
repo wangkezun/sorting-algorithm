@@ -10,7 +10,7 @@ public interface Sorting {
 	 *
 	 * @param array array that will be sorted
 	 */
-	int[] sorting(int[] array);
+	void sort(int[] array);
 
 	/**
 	 * swap two element from array
@@ -23,5 +23,17 @@ public interface Sorting {
 		int temp = array[i];
 		array[i] = array[j];
 		array[j] = temp;
+	}
+
+	static boolean isSorted(int[] array) {
+		if (array==null ||array.length==1) {
+		    return true;
+        }
+        for(int i=1;i<array.length;i++) {
+		    if(array[i-1]>array[i]) {
+		        return false;
+            }
+        }
+        return true;
 	}
 }

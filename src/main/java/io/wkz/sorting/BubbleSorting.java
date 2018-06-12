@@ -10,7 +10,7 @@ import io.wkz.sorting.base.Sorting;
  */
 public class BubbleSorting implements Sorting {
 	@Override
-	public int[] sorting(int[] array) {
+	public void sort(int[] array) {
 		for (int i = 0; i < array.length; i++) {
 			for (int j = 0; j < array.length-1-i; j++) {
 				if (array[j] > array[j+1]) {
@@ -18,6 +18,5 @@ public class BubbleSorting implements Sorting {
 				}
 			}
 		}
-		return array;
 	}
 }

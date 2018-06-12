@@ -4,7 +4,7 @@ import io.wkz.sorting.base.Sorting;
 
 public class InsertionSorting implements Sorting {
     @Override
-    public int[] sorting(int[] array) {
+    public void sort(int[] array) {
         int i;
         for (int p = 1; p < array.length; p++) {
             //p位置的数
@@ -17,6 +17,5 @@ public class InsertionSorting implements Sorting {
             //获取到temp所在位置后，将temp赋值回去。
             array[i] = temp;
         }
-        return array;
     }
 }

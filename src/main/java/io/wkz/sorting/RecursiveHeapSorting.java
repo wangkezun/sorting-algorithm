@@ -10,12 +10,12 @@ import io.wkz.sorting.base.Sorting;
  */
 public class RecursiveHeapSorting implements Sorting {
     @Override
-    public int[] sorting(int[] array) {
+    public void sort(int[] array) {
         //堆排序需要先对数组进行堆化处理
         //从第一个非叶子节点出发即可，叶子节点都可以看作已经符合堆要求的节点
 
         for (int i = array.length / 2; i >= 0; i--) {
-            recursiveMaxHeapify(array, i, array.length);
+            recursiveMaxHeapify(array, i, array.length - 1);
         }
 
         //堆化完成之后，从length开始，交换堆顶元素与length位置元素，并且重新堆化，最后到length为0
@@ -26,7 +26,6 @@ public class RecursiveHeapSorting implements Sorting {
             recursiveMaxHeapify(array, 0, i - 1);
         }
 
-        return array;
     }
 
 

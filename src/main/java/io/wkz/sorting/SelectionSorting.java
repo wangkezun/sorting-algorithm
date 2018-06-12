@@ -10,7 +10,7 @@ import io.wkz.sorting.base.Sorting;
  */
 public class SelectionSorting implements Sorting {
 	@Override
-	public int[] sorting(int[] array) {
+	public void sort(int[] array) {
 		int min;
 		for (int i = 0; i < array.length - 1; i++) {
 			min = i;
@@ -22,6 +22,5 @@ public class SelectionSorting implements Sorting {
 			}
 			swap(array, i, min);
 		}
-		return array;
 	}
 }
