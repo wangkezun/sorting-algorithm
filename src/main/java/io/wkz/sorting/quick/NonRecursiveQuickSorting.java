@@ -1,4 +1,4 @@
-package io.wkz.sorting;
+package io.wkz.sorting.quick;
 
 import io.wkz.sorting.base.Sorting;
 
