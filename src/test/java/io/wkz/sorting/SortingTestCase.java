@@ -1,5 +1,6 @@
 package io.wkz.sorting;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,22 +15,49 @@ public class SortingTestCase {
 	private int[] array;
 
 	@Before
-	public void before(){
-		array =  new int[]{3,5,3,0,8,6,1,5,8,6,2,4,9,4,7,0,1,8,9,7,3,1,2,5,9,7,4,0,2,6};
+	public void before() {
+		array = new int[]{3, 5, 3, 0, 8, 6, 1, 5, 8, 6, 2, 4, 9, 4, 7, 0, 1, 8, 9, 7, 3, 1, 2, 5, 9, 7, 4, 0, 2, 6};
 	}
 
 
 	@Test
-	public void heapSortingTest() {
-		HeapSorting heapSorting = new HeapSorting();
-		heapSorting.sorting(array);
-		System.out.println(Arrays.toString(array));
+	public void recursiveHeapSortingTest() {
+		RecursiveHeapSorting recursiveHeapSorting = new RecursiveHeapSorting();
+		recursiveHeapSorting.sorting(array);
 	}
 
 	@Test
 	public void bubbleSortingTest() {
 		BubbleSorting bubbleSorting = new BubbleSorting();
 		bubbleSorting.sorting(array);
+	}
+
+	@Test
+	public void selectionSortingTest() {
+		SelectionSorting selectionSorting = new SelectionSorting();
+		selectionSorting.sorting(array);
+	}
+
+	@Test
+	public void insertionSortingTest(){
+		InsertionSorting insertionSorting = new InsertionSorting();
+		insertionSorting.sorting(array);
+	}
+
+	@Test
+    public void shellSortingTest() {
+        ShellSorting shellSorting = new ShellSorting();
+        shellSorting.sorting(array);
+    }
+
+    @Test
+    public void nonRecursiveHeapSortingTest() {
+        NonRecursiveHeapSorting nonRecursiveHeapSorting = new NonRecursiveHeapSorting();
+        nonRecursiveHeapSorting.sorting(array);
+    }
+
+	@After
+	public void after() {
 		System.out.println(Arrays.toString(array));
 	}
 }
