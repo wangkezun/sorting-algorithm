@@ -19,7 +19,7 @@ public interface Sorting {
 	 * @param i     position i
 	 * @param j     position j
 	 */
-	default void swap(int[] array, int i, int j) {
+	default  void swap(int[] array, int i, int j) {
 		int temp = array[i];
 		array[i] = array[j];
 		array[j] = temp;
